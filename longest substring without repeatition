@@ -1,0 +1,15 @@
+def main():
+  if(s==""):
+    return 0
+  else:
+    maxi=1
+    for i in range(len(s)):
+      substr=s[i]
+      for j in range(i+1,len(s)):
+        if s[j] not in substr:
+          substr+=s[j]
+          maxi=max(maxi,len(substr))
+        else:
+          break
+   return maxi
+main()
