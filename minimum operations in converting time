@@ -1,0 +1,14 @@
+def main():
+  newcu=current.split[":"]
+  newco=correct.split[":"]
+  
+  newcu=[int(x) for x in newcu]
+  newco=[int(x) for x in newco]
+  
+  newcu1=newcu[0]*60+newcu[1]
+  newco1=newco[0]*60+newco[1]
+  
+  diff=newco1-newcu1
+  nums=diff//60 + diff%60//15 + diff%60%15//5 + diff%60%15%5
+  print(nums)
+ main()
