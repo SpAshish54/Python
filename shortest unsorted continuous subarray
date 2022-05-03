@@ -1,0 +1,9 @@
+def main():
+  sorted_nums=sorted(nums)
+  left=len(nums)-1
+  right=0
+  for i in range(len(nums)):
+    if(sorted_nums[i]!=nums[i]):
+      left=min(i,left)
+      right=max(i,right)
+  return 0 if left>=right else right-left+1
