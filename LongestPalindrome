@@ -1,0 +1,12 @@
+def main():
+  ss=set()
+  for i in s:
+    if i not in ss:
+      ss.add(i)
+    else:
+      ss.remove(i)
+  if(len(ss)!=0):
+    return (len(s)-len(ss)+1)
+  else:
+    return (len(s))
+main()
