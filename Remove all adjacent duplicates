@@ -1,0 +1,16 @@
+INPUT : s = "abbbaacdddc" ; k=3
+OUTPUT : "cc"
+
+def removeDuplicates(s,k):
+  stack = []    #char,count is stored in stack.
+  for i in s:
+    if stack and stack[-1][0] == i:   #if stack is not empty and if top value of stack is equal to char then increase the count. 
+      stack[-1][1] += 1
+    else:                            #if stack doesnt have the value then append it to stack and increase the count of that character
+      stack.append([i,1])
+    if stack[-1][1] == k:
+      stack.pop()
+  res = ""
+  for char,count in stack:
+    res += (char * count)
+  return res
